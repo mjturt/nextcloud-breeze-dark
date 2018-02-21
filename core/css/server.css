@@ -2680,6 +2680,8 @@ button#deleteaccount {
 #city-right {
   border-top: 1px solid #706f6e; }
 
+.app-ocdownloader h3 {
+  color: red; }
 .app-ocdownloader #app-content {
   overflow-y: hidden;
   padding-right: 0 !important; }
