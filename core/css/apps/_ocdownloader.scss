@@ -1,191 +1,52 @@
 .app-ocdownloader {
-	
-    h3 {
-        color: red;
+
+    #app-content {
+        overflow-y: hidden;
+        padding-right: 0 !important;
+
+        #app-content-wrapper {
+            #controls {
+                background-color: $background-normal;
+            }
+            .content-page {
+                .jumbotron {
+                    background-color: $background-dark; 
+                }        
+            }
+        }
     }
-	#app-content {
-		overflow-y: hidden;
-		padding-right: 0 !important;
-	}
 
-	#app-navigation {
-
-		.active {
-			background-color: inherit;
-		}
-
-		.new-entity {
-			color: $foreground-normal;
-			opacity: 0.7;
-
-			&:hover {
-				background-color: $background-active-hover;
-				color: $foreground-normal;
-				opacity: 1;
-			}
-		}
-
-		.app-navigation-entry-menu {
-			background-color: $background-normal;
-			color: $foreground-normal;
-			border: 1px solid $decoration-normal;
-			-webkit-filter: none;
-			-moz-filter: none;
-			-ms-filter: none;
-			-o-filter: none;
-			filter: none;
-
-			&::after {
-				border-bottom-color: $decoration-normal;
-			}
-		}
-
-		.app-navigation-entry-edit,
-		.app-navigation-entry-deleted {
-			background-color: $background-normal;
-		}
-
-		.togglebuttons {
-
-			.button.active {
-				color: $foreground-normal;
-				box-shadow: none;
-			}
-		}
-
-		#datepickercontainer {
-			box-shadow: none;
-
-			#datepicker table td {
-				
-				button {
-					box-shadow: none;
-					border-color: $decoration-normal;
-
-					&:hover {
-						background-color: $background-active-hover;
-						border-radius: 50%;
-					}
-				}
-
-				&.highlight-today {
-					background-color: $background-active-alternate;
-				}
-			}
-
-			.datepicker-heading {
-
-				.button {
-					background-color: $background-normal;
-				}
-			}
-		}
-	}
-}
- 
-.fc-unthemed {
-	
-	th, td, thead, tbody, .fc-divider, .fc-row, .fc-popover {
-		border-color: $decoration-normal;
-	}
-
-	.fc-divider, .fc-popover .fc-header, .fc-list-heading td {
-		background-color: $background-alternate;
-	}
-}
-
-#fullcalendar {
-	background-color: $background-dark;
-
-	table thead th {
-		background-color: $background-dark;
-	}
-
-	table tbody tr td.fc-other-month {
-		background-color: $background-normal;
-	}
-
-	&.fc-unthemed {
-
-		tr td {
-			border-top-color: $decoration-normal;
-		}
-		
-		.fc-today {
-			background-color: $background-active !important;
-			color: $foreground-active;
-			border-color: $decoration-normal;
-
-			span.fc-day-number {
-				font-weight: 600;
-			}
-		}
-	}
-
-	td.fc-day {
-		&.fc-sat, &.fc-sun {
-			background-color: $background-dark;
-
-			&.fc-other-month {
-				background-color: $background-normal;
-			}
-		}
-	}
-}
-
-.fc-basic-view .fc-day-top .fc-week-number {
-	background-color: $background-normal;
-	color: $foreground-normal;
-	border-right: 1px solid $decoration-normal;
-	border-bottom: 1px solid $decoration-normal;
-}
-
-.fc th,
-.fc .fc-axis,
-.fc-day-grid-event .fc-time,
-.fc-ltr .fc-basic-view .fc-day-number,
-.fc-ltr .fc-basic-view .fc-week-number,
-.fc-time-grid-event .fc-time {
-	opacity: 1;
-	font-size: 85%;
-}
-
-// Centers the position of the day number in the corner
-.fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
-	padding-right: 6px;
-}
-
-#app-settings .settings-fieldset .settings-upload {
-	background-color: $background-normal;
-	border: 1px solid $decoration-normal;
-}
-
-.modal-open {
-	
-	.modal.popover, .modal.import {
-		background: $background-normal;
-		box-shadow: none;
-		border: 1px solid $decoration-normal;
-	}
-}
-
-.modal-dialog .modal-content #app-sidebar {
-	border: none;
-}
-
-.advanced {
-
-	// Force location field in app sidebar to be dark
-	.advanced--input {
-		background: $background-dark !important;
-	}
-
-	.advanced--button-area {
-		border-color: $decoration-normal;
-	}
-}
-
-.advanced--fieldset-attendeelist .advanced--toggler:hover, 
-.advanced--fieldset-reminderlist .advanced--toggler:hover {
-	background: $background-active-hover;
+    #app-navigation {
+        li {
+            &:hover > div > a {
+                background-color: $background-active-hover;
+            }
+            &:focus > div > a {
+                background-color: $background-active-hover;
+            }
+        }
+        .selected {
+            background-color: $background-active-hover;
+            a {
+                background-color: $background-active-hover;
+            }
+        }
+        a:focus {
+            background-color: $background-active-hover;
+        }
+        ul {
+            .active {
+                background-color: $background-dark;
+            }
+            color: $foreground-normal;
+            li {
+                a {
+                    color: $foreground-normal;
+                }
+                a:hover {
+                    background-color: $background-active-hover;
+                }
+            }
+        }
+    }
 }
